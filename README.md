@@ -24,6 +24,14 @@ This design uses a flag-based interface (no FIFO).
 The system must check `rx_empty` before reading
 and `tx_full` before writing.
 
+## Architecture
+The UART uses a flag + one-word buffer interface scheme.
+The receiver and transmitter are FSM-based, while buffering
+and handshaking are handled using flag logic.
+
+![UART Architecture](uart_architecture.png)
+
+
 ## Tools Used
 - Verilog HDL
 - Xilinx Vivado
