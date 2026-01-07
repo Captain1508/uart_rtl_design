@@ -29,5 +29,17 @@ and `tx_full` before writing.
 - Xilinx Vivado
 - XSim (for simulation)
 
+## Design Details
+- Receiver uses 16x oversampling
+- FSM-based RX and TX
+- Flag-based interface (no FIFO)
+- Blocking data overwrite avoided using flag logic
+
+## How to Simulate
+1. Open Vivado
+2. Add files from `rtl/` and `tb/`
+3. Run behavioral simulation
+
+
 ## Author
 Aman Sharma
